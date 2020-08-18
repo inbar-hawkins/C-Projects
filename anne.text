@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+	<head>
+		<title>Anne's Page</title>
+	</head>
+	<body>
+		<h1>About Me</h1>
+		<div
+		style = "background-color:blue;color:white">
+		<p>
+		Hello!My name is <strong> Anne</strong> and I'm two years old.<br/>I'm beautiful, smart and cute. <br/>In fact, I'm the cutest girl in the world.<br/>This is all you need to know about me for now.
+		</p>
+		</div>
+		
+		<p>
+		<!--to make a comment-->
+		<img src="anne1.jpg" height="25%" width="25%"
+		alt = "photo is missing"/>
+		</p>
+		
+		<p>
+		<a href = "https://www.youtube.com/watch?v=pfyTT1NzaO0"
+		target = "_blank">
+			My favourate video! </a>
+		</p>
+
+		<p>
+		<h1><span> My Favourate Songs</span></h1>
+		<ul>
+		<li><a href = "https://www.youtube.com/watch?v=6nbLonF6txI" target ="_blank">Happy Birthday</a> </li>
+		<li><a href = "https://www.youtube.com/watch?v=dUWFRpdnHSM" target ="_blank">Tu Bishvat</a> </li>
+		<li><a href = "https://www.youtube.com/watch?v=WzX4Wv-DP-0" target ="_blank">Igulim Shel Or</a> </li>
+		</ul>
+		</p>
+
+		<p>
+		<h1><span> My Week in the Nursery</span></h1>
+		<table>
+		<table border = "5">
+		<tr>
+			<th>Day</th>
+			<th>Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+		</tr>
+
+		<tr>
+		<td>08:30-09:30 </td>
+		<td>breakfast</td>
+		<td>breakfast</td>
+		<td>breakfast</td>
+		<td>breakfast</td>
+		<td>breakfast</td>
+		<td>breakfast</td>
+		</tr>
+
+		<tr>
+		<td>09:30-12:00 </td>
+		<td>play</td>
+		<td bgcolor = "green">sport lesson</td>
+		<td>play</td>
+		<td>play</td>
+		<td bgcolor = "green">sport lesson</td>
+		<td>Kabalat Shabat</td>
+		</tr>
+
+		<tr>
+		<td>12:00-13:00 </td>
+		<td>lunch</td>
+		<td>lunch</td>
+		<td>lunch</td>
+		<td>lunch</td>
+		<td>lunch</td>
+		<td bgcolor = "red">pasta time</td>
+		</tr>
+
+		<tr>
+		<td>13:00-15:00 </td>
+		<td>sleep</td>
+		<td>sleep</td>
+		<td>sleep</td>
+		<td>sleep</td>
+		<td>sleep</td>
+		<td colspan = "2">going home!</td>
+		</tr>
+
+		<tr>
+		<td>15:00-16:00 </td>
+		<td>play</td>
+		<td>play</td>
+		<td>play</td>
+		<td>play</td>
+		<td>play</td>
+		</tr>
+
+		</table>
+		</p>
+
+		<p>
+		<h1>Send Me Your Greetings</h1>
+		<form>
+		<label>Your name:   </label>
+		<input id ="user_name" name = "name" type = "text"
+placeholder = "Inbar Hawkins" required/> <br/>
+		<label>Your E-mail:</label>
+		<input id = "user_mail" name = "email" type = "email" placeholder = "inbareiny@gmail.com"/> <br/>
+		<label>Your Mobile:  </label>
+		<input id = "user_mobile" name = "mobile" type = "tel" placeholder = "054-6246398"/> <br/>
+		<label>Your Message:  </label>
+		<textarea id="user_message" name = "message"  required> </textarea>
+
+		<input type = "submit" value="SEND"/>
+
+		</form>
+		
+		</p>
+
+		<div>
+		<h1><span> My Gallery</span></h1>
+			<button onclick="prev()">Prev </button>
+			<img id="slider" src="anne1.jpg" width="25%" height="25%"/>
+			<button onclick="next()">Next </button>
+		
+				<script>
+				var images = ["anne1.jpg", "anne2.jpg","anne3.jpg","anne4.jpg"];
+				var num = 0;
+
+				function prev(){
+				var slider = document.getElementById('slider');
+				num--;
+				if(num < 0){
+				num = images.length - 1;}
+				slider.src = images[num];}
+
+				function next(){
+				var slider = document.getElementById('slider');
+				num++;
+				if(num >= images.length){
+				num = 0;}
+				slider.src = images[num];}
+				</script>
+
+		</div>
+	
+	</body>
+</html>
