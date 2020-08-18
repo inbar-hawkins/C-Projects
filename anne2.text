@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anne's Page</title>
+	</head>
+	<body>
+	
+		<h1><span> My Gallery</span></h1>
+	<div>
+			<button onclick="prev()">Prev </button>
+			<img id="slider" src="anne1.jpg" width="25%" height="25%"/>
+			<button onclick="next()">Next </button>
+		
+				<script>
+				var images = ["anne1.jpg", "anne2.jpg","anne3.jpg","anne4.jpg"];
+				var num = 0;
+
+				function prev(){
+				var slider = document.getElementById('slider');
+				num--;
+				if(num < 0){
+				num = images.length - 1;}
+				slider.src = images[num];}
+
+				function next(){
+				var slider = document.getElementById('slider');
+				num++;
+				if(num >= images.length){
+				num = 0;}
+				slider.src = images[num];}
+				</script>
+
+				
+				
+
+</div>
+	
+	</body>
+</html>
